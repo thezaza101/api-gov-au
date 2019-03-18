@@ -35,6 +35,12 @@ class Controller {
 
     }
 
+    @RequestMapping("/disclaimer")
+    fun disclaimer(model:MutableMap<String, Any?>): String{
+        return "disclaimer"
+
+    }
+
     @RequestMapping("/apis")
     fun services(model:MutableMap<String, Any?>): String{
         model.put("services", serviceDescriptionService.list())
@@ -59,7 +65,7 @@ class Controller {
         val serviceDescription = serviceDescriptionService.get(id) ?: return "detail"
 
         val unescapedTitle = URLDecoder.decode(title)
-
+        val lastedit = serviceDescriptionService.getLastEdited(id)
         val page = serviceDescription.pages.firstOrNull {it -> it.title == unescapedTitle} ?: serviceDescription.pages.first()
         model.put("prevPage", serviceDescription.previous(page))
         model.put("nextPage", serviceDescription.next(page))
@@ -68,7 +74,7 @@ class Controller {
         model.put("model", serviceDescription)
         model.put("pageList", serviceDescription.navigation)
         model.put("content", page.html())
-
+        model.put("lastEdit", lastedit)
         return "detail"
     }
 
