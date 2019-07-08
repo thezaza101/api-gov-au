@@ -62,11 +62,11 @@
 	}
 	.itemIndexRow:first-child
 	{
-		margin-top: 100px;
+		margin-top: 20px;
 	}
 	.itemIndexRow:last-child
 	{
-		margin-bottom: 100px;
+		margin-bottom: 40px;
 	}
 	.itemIndexRow
 	{
@@ -353,3 +353,355 @@ CODE
     color: #666666;
     font-size: small;
 }
+/* developer hub styles */
+
+@media screen and (max-width: 768px)
+{
+}
+@media screen and (min-width: 768px)
+{
+	.section__head
+	{
+		padding-bottom: 0px !important;
+	}
+	.section__title
+	{
+		max-width: 300px;
+		border-bottom: 2px solid black;
+		vertical-align: bottom !important;
+		height: 50px;
+		padding-top: 50px !important;
+	}
+	.section__titleLink
+	{
+		text-decoration: none !important;
+		color: black !important;
+		vertical-align: top;
+	}
+	.section__titleLink > .section__title:after
+	{
+		content: '\00a0\00a0>';
+		font-family: '"Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;';
+	}
+	.section__titleLink:hover
+	{
+		text-decoration: underline !important;
+		color: #089194 !important;
+	}
+	.section__topiclist
+	{
+		margin-top: 0px;
+	}
+	.jumbo
+	{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+.section__topiclist
+{
+	list-style: none;
+	padding-left: 10px;
+}
+.section__topic:before
+{
+	content: '>';
+	padding-right: 5px;
+}
+.section__head
+{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.section__title
+{
+	margin-top: 20px;
+}
+.section__title__underline
+{
+	text-decoration: underline;
+}
+.section__subtext
+.section__subtext
+{
+	margin-top: 0px !important;
+    text-decoration: none !important;
+}
+/**/
+.dashboardHeader
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.dashboardHeader__title__logo
+{
+    height:100px !important;
+}
+.dashboardHeader__title
+{
+	width: 350px;
+	float: left;
+}
+.dashboardHeader__body
+{
+	clear: both;
+	padding-top: 18px;
+	padding-bottom: 35px;
+}
+.dashboardHeader__overview
+{
+	font-weight: bold;
+	padding-right: 10px;
+}
+.dashboardHeader__widgets
+{
+	float: right;
+	padding-right: 20px;
+}
+.dashboardWidget__icon
+{
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.dashboardWidget__count
+{
+	font-size: smaller;
+	color: black;
+	background: #61DAFF;
+	font-weight: bold;
+	/*+border-radius: 20px;*/
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	display: inline;
+	padding: 4px 6px 4px 5px;
+}
+/**/
+.popularItems
+{
+	/*border: 1px solid black;*/
+}
+.popularItems__head
+{
+	border-bottom: 1px solid black;
+	font-weight: bold;
+}
+.popularItems__headTitle
+{
+	display: inline;
+}
+.popularItems__headMore
+{
+	float: right;
+}
+.popularItems__headMore:after
+{
+	content: '\00a0>';
+}
+.popularItem
+{
+	border-bottom: 1px solid black;
+	padding: 10px;
+}
+.popularItem:last-child
+{
+	border-bottom: none;
+}
+.popularItem__title
+{
+	font-weight: bold;
+}
+.popularItem__title:after
+{
+	content: '\00a0>';
+}
+.popularItem__date
+{
+	font-style: italic;
+	font-size: smaller;
+}
+/**/
+.callToAction
+{
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+/**/
+.servicesList
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.digitalService
+{
+	border: 1px solid black;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+
+#conversations {
+    margin-top: 25px;
+}
+
+#conversations input.toggle {
+    position: absolute;
+    left: -9999px;
+}
+
+#conversations div.conversation {
+    display: none;
+    overflow-wrap: break-word;
+}
+
+#conversations #toggle-issue:checked ~ ul div[data-labels ~= "issues"] {
+    display: block;
+}
+
+#conversations #toggle-pull-request:checked ~ ul div[data-labels ~= "pulls"] {
+    display: block;
+}
+
+#conversations #toggle-issue:checked ~ ul li.issue {
+    background-color: #00698F;
+    color: #FFF;
+}
+
+#conversations #toggle-pull-request:checked ~ ul li.pull-request {
+    background-color: #00698F;
+    color: #FFF;
+}
+
+.conversation {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 10px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    min-height: 125px;
+}
+
+.conversation h5 {
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+.conversation p {
+    margin: 0px;
+}
+
+ul.conversation-list {
+    padding: 0px;
+    list-style-type: none;
+}
+
+#conversations #toggle-issue ~ ul div.issue-active {
+    display: none;
+}
+
+.conversation .conversation-content {
+    padding: 10px;
+}
+
+#conversations #toggle-issue ~ ul div.issue-inactive {
+    color: black;
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    width: 8px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+}
+
+#conversations #toggle-issue:checked ~ ul div.issue-active {
+    color: #FFF;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    width: 8px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+}
+
+#conversations #toggle-issue:checked ~ ul div.issue-inactive {
+    display: none;
+}
+
+#conversations #toggle-pull-request ~ ul div.pull-request-active {
+    display: none;
+}
+
+#conversations #toggle-pull-request ~ ul div.pull-request-inactive {
+    color: black;
+    font-size: 1em;
+    display: inline-block;
+    text-align: center;
+    width: 8px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+}
+
+#conversations #toggle-pull-request:checked ~ ul div.pull-request-active {
+    color: #FFF;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    width: 8px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+}
+
+#conversations #toggle-pull-request:checked ~ ul div.pull-request-inactive {
+    display: none;
+}
+
+#conversations .conversation .user-info {
+    margin-left: 10px;
+    border: 2px solid #f5f5f0;
+    border-radius: 5%;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    min-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#conversations .conversation img {
+    border-radius: 50%;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    margin-top: 4px;
+}
+
+#conversations .conversation .au-tags {
+    text-align: right;
+}
+
+#conversations .conversation .au-tags li {
+    white-space: nowrap;
+}
+
+.comment {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 10px;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    min-height: 125px;
+}
+
+
+
